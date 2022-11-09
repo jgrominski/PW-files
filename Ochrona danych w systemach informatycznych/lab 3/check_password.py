@@ -22,7 +22,7 @@ def calculate_password_entropy(text):
     if any(ord(c) not in itertools.chain(small_chars, big_chars, numbers) for c in text):
         alphabet_size += 194
 
-    return len(set(text)) * log2(alphabet_size)
+    return len(text) * log2(alphabet_size)
 
 
 f = open(sys.argv[1], "r")
